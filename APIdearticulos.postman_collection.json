@@ -1,0 +1,31 @@
+{
+	"info": {
+		"_postman_id": "b317f84a-8045-402d-a749-a3fd3888bc17",
+		"name": "API de articulos",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "24185643",
+		"_collection_link": "https://galactic-meadow-737013.postman.co/workspace/Udem~9838b82b-5cd5-4a20-9d92-c4e41632a208/collection/24185643-b317f84a-8045-402d-a749-a3fd3888bc17?action=share&creator=24185643&source=collection_link"
+	},
+	"item": [
+		{
+			"name": "lista articulos",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://reqres.in/api/unknown",
+					"protocol": "https",
+					"host": [
+						"reqres",
+						"in"
+					],
+					"path": [
+						"api",
+						"unknown"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}

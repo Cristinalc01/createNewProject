@@ -1,0 +1,201 @@
+{
+	"info": {
+		"_postman_id": "6c13c2f1-dc96-4d76-bb31-6fe08c5c5d41",
+		"name": "My store API",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "24185643",
+		"_collection_link": "https://galactic-meadow-737013.postman.co/workspace/Udem~9838b82b-5cd5-4a20-9d92-c4e41632a208/collection/24185643-6c13c2f1-dc96-4d76-bb31-6fe08c5c5d41?action=share&creator=24185643&source=collection_link"
+	},
+	"item": [
+		{
+			"name": "API Products by category",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://mystoreapi.com/catalog/category/supplements/products?limit=20",
+					"protocol": "https",
+					"host": [
+						"mystoreapi",
+						"com"
+					],
+					"path": [
+						"catalog",
+						"category",
+						"supplements",
+						"products"
+					],
+					"query": [
+						{
+							"key": "limit",
+							"value": "20"
+						},
+						{
+							"key": "skip",
+							"value": "1",
+							"disabled": true
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Api crear productos en la tienda",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n  \"name\": \"Compu\",\n  \"price\": 2000,\n  \"manufacturer\": \"mack\",\n  \"category\": \"M1\",\n  \"description\": \"Mack M1 2022\",\n  \"tags\": \"tech\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://mystoreapi.com/catalog/product",
+					"protocol": "https",
+					"host": [
+						"mystoreapi",
+						"com"
+					],
+					"path": [
+						"catalog",
+						"product"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "API producto por ID",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://mystoreapi.com/catalog/product/956074",
+					"protocol": "https",
+					"host": [
+						"mystoreapi",
+						"com"
+					],
+					"path": [
+						"catalog",
+						"product",
+						"956074"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "API crear producto 2",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n  \"name\": \"TV\",\n  \"price\": 1500,\n  \"manufacturer\": \"LG\",\n  \"category\": \"TVS\",\n  \"description\": \"tv 4k\",\n  \"tags\": \"home\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://mystoreapi.com/catalog/product",
+					"protocol": "https",
+					"host": [
+						"mystoreapi",
+						"com"
+					],
+					"path": [
+						"catalog",
+						"product"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "traer todos los productos",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{URL-GLOBAL}}/catalog/category/{{CATEGORIA}}/product?limit&skip",
+					"host": [
+						"{{URL-GLOBAL}}"
+					],
+					"path": [
+						"catalog",
+						"category",
+						"{{CATEGORIA}}",
+						"product"
+					],
+					"query": [
+						{
+							"key": "limit",
+							"value": null,
+							"description": "10"
+						},
+						{
+							"key": "skip",
+							"value": null,
+							"description": "1"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "New Request",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{URL-GLOBAL}}/catalog/product/{{ID-PRODUCTO}}",
+					"host": [
+						"{{URL-GLOBAL}}"
+					],
+					"path": [
+						"catalog",
+						"product",
+						"{{ID-PRODUCTO}}"
+					]
+				}
+			},
+			"response": []
+		}
+	],
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		}
+	],
+	"variable": [
+		{
+			"key": "url",
+			"value": "",
+			"type": "string"
+		}
+	]
+}
